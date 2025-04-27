@@ -21,4 +21,18 @@ public class PersonController : ControllerBase
         var personneCree = await _personService.ajouterPersonneAsync(person);
         return personneCree; 
     }
+
+    [HttpGet("all")]
+    public async Task<ActionResult<List<Person>>> getAll()
+    {
+        var people =  await _personService.getPersons();
+        return people; 
+    }
+    
+    [HttpDelete("delete/{id}")]
+    public async Task<ActionResult<string>> deletePerson(int id)
+    {
+        var resut = await _personService.DeletePerson(id);
+        return resut;
+    }
 }

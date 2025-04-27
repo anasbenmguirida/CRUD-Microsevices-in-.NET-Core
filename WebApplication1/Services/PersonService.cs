@@ -17,4 +17,24 @@ public class PersonService
         await _myDbContext.SaveChangesAsync();
         return personne;
     }
+
+    public async Task<List<Person>> getPersons()
+    {
+         List<Person> persons =  _myDbContext.Persons.ToList();
+         return persons; 
+    }
+
+    public async Task<string> DeletePerson(int id)
+    {
+        Person optionalPerson = await _myDbContext.Persons.FindAsync(id);
+        if (optionalPerson != null)
+        {
+            _myDbContext.Remove(optionalPerson);
+            await _myDbContext.SaveChangesAsync(); // <-- You must save the changes
+            return "deleted";
+        }
+
+        return "not found";
+    }
+
 }

@@ -7,12 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<PersonService>(); // registering the service 
-builder.Services.AddControllers(); // controllers 
+builder.Services.AddScoped<PersonService>();
+builder.Services.AddControllers().AddNewtonsoftJson(); 
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(8, 0, 36)) // or your installed MySQL version
+        new MySqlServerVersion(new Version(8, 0, 36)) 
     ));
 var app = builder.Build();
 
