@@ -22,6 +22,11 @@ public class PersonController : ControllerBase
         return personneCree; 
     }
 
+    [HttpGet("all/sync")]
+    public List<Person> getAllSync()
+    {
+        return _personService.getAll(); 
+    }
     [HttpGet("all")]
     public async Task<ActionResult<List<Person>>> getAll()
     {

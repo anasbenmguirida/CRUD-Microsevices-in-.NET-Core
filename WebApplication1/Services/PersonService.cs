@@ -24,6 +24,10 @@ public class PersonService
          return persons; 
     }
 
+    public List<Person> getAll()
+    {
+        return _myDbContext.Persons.ToList(); 
+    }
     public async Task<string> DeletePerson(int id)
     {
         Person optionalPerson = await _myDbContext.Persons.FindAsync(id);
