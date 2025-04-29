@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{88FAB39A-1DFB-47F5-806D-3149D0861E07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{88FAB39A-1DFB-47F5-806D-3149D0861E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service2", "Service2\Service2.csproj", "{EFB025D9-FF63-46B0-9D62-ADED35EC7559}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{EFB025D9-FF63-46B0-9D62-ADED35EC7559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{9BDDE9A8-4E2C-4259-B93D-A5AB8452E0CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{EFB025D9-FF63-46B0-9D62-ADED35EC7559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB025D9-FF63-46B0-9D62-ADED35EC7559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB025D9-FF63-46B0-9D62-ADED35EC7559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BDDE9A8-4E2C-4259-B93D-A5AB8452E0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BDDE9A8-4E2C-4259-B93D-A5AB8452E0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BDDE9A8-4E2C-4259-B93D-A5AB8452E0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BDDE9A8-4E2C-4259-B93D-A5AB8452E0CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
