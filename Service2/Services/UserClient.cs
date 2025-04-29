@@ -10,12 +10,12 @@ public class UserClient
     {
         _httpClient = httpClient; 
     }
-    public async Task<object> GetUserNames()
+    public async Task<string> GetUserNames()
     {
         var response = await _httpClient.GetAsync($"http://localhost:5212/api/person/all");
         response.EnsureSuccessStatusCode();
         
-        var usersNames = await response.Content.ReadFromJsonAsync<PersonDTO>();
-        return usersNames;
+        return await response.Content.ReadAsStringAsync();
+        
     }
 }

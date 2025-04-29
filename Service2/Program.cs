@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<ProductService>();
-builder.Services.AddScoped<UserClient>();
+builder.Services.AddHttpClient<UserClient>();
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<NDBcontext>(options =>
